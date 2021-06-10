@@ -1,0 +1,41 @@
+<div class="section">
+
+    <div class="container">
+
+        <h1 class="label label-danger">Perfil Proveedor:</h1>
+
+        <div>
+            <div>
+
+                <div>
+                    <label>Nombre:</label>
+                    <label class="label label-danger"> {{user?.nombre}}</label>
+                </div>
+
+                <div>
+                    <label>Apellido: </label>
+                    <label> {{user?.apellido}}</label>
+
+                </div>
+
+                <div>
+                    <label>Correo: </label>
+                    <label> {{user?.email}}</label>
+                </div>
+
+                <div>
+                    <label>Telefono: </label>
+                    <label> {{user?.celular}}</label>
+                </div>
+
+            </div>
+
+            <div>
+                Foto:
+                <img src="{{user?.foto}}">
+            </div>
+
+        </div>
+    </div>
+
+</div>

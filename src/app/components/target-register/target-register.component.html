@@ -1,0 +1,87 @@
+<div class="section">
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-sm">
+
+                <h4>Registrar Tarjeta</h4>
+                <div>
+                    <br>
+                    <label>No. Tarjeta</label>
+                    <br>
+                    <input type="text" name="no" [(ngModel)]="target.no">
+
+                </div>
+
+                <div>
+
+                    <br>
+                    <label>Caducidad</label>
+                    <br>
+                    <input type="text" name="caducidad" [(ngModel)]="target.caducidad">
+
+                </div>
+
+
+                <div>
+
+                    <br>
+                    <label>Codigo:</label>
+                    <br>
+                    <input type="password" name="codigo" [(ngModel)]="target.codigo">
+                    <br>
+                </div>
+
+                <div>
+                    <br>
+                    <label>Tipo Tarjeta:</label><br>
+                    <select name="tipoTarjeta" id="tipoTarjeta" [(ngModel)]="target.tipo">
+                        <option value=1>Debito</option>
+                        <option value=2>Credito</option>
+                    </select>
+
+                </div>
+
+
+
+                <br>
+                <button class="btn btn-secondary" (click)="onSumbit()">Registrar</button>
+            </div>
+
+
+            <div class="col-sm">
+                <h4>Tarjetas Registradas:</h4>
+                <br>
+                <ul class="list-group">
+
+                    <li class="list-group-item" *ngFor="let item of info">
+                        {{item.numero}}
+                    </li>
+
+                </ul>
+
+                <label for="Targeta">Choose a no:</label>
+                <br>
+                <select name="Targeta" id="Targeta" [(ngModel)]="targetNo.numero">
+                    <option *ngFor="let item of info" value="{{item.numero}}">
+                        {{item.numero}}
+                    </option>
+                </select>
+                <br>
+                <br>
+                <button class="btn btn-secondary" (click)="deleteSumbit()">Eliminar Tarjeta</button>
+
+            </div>
+
+
+
+        </div>
+
+
+
+    </div>
+
+
+</div>
