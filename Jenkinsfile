@@ -4,18 +4,8 @@ pipeline {
 		stages {
             stage('bajar'){
 				steps {
-					bat "git pull"
+					bat "cd C:\\Users\\Administrator\\BookSA-Frontend && git pull && npm install && npm run-script build"
 				}
 			}
-			stage('install'){
-				steps {
-					bat "npm install"
-				}
-			}
-            stage('despliegue'){
-                steps {
-                    bat "npm run-script build"
-                }
-            }
 		}
 }
