@@ -1,0 +1,78 @@
+
+<div id="Contenedor">
+    <div class="row">
+<div class="col">
+    <button class="btn btn-block btn-outline-dark" (click)="registroCliente=true"><i class="fa fa-user"></i> Cliente</button>
+</div>
+<div class="col">
+    <button class="btn btn-block btn-outline-dark" (click)="registroCliente=false"> <i class="fa fa-user"></i> Proveedor</button>
+</div>
+    </div>
+    <div class="Icon">
+        <!--Icono de usuario-->
+        <span class="fa fa-user"></span>
+    </div>
+        <div class="ContentForm" >
+        <form action="" method="post" name="FormEntrar" *ngIf="registroCliente">
+            <h4 *ngIf="registroCliente">Registro Cliente</h4>
+            <div class="input-group input-group-lg">
+                <span class="input-group-addon" id="sizing-addon1"><i class="glyphicon glyphicon-lock"></i></span>
+                <input type="text"  [(ngModel)]="userInfo.nombre" name="nombre" class="form-control" placeholder="Nombres" aria-describedby="sizing-addon1" required>
+              </div>
+              <div class="input-group input-group-lg">
+                <span class="input-group-addon" id="sizing-addon1"><i class="glyphicon glyphicon-lock"></i></span>
+                <input type="text"  [(ngModel)]="userInfo.apellido" name="apellido" class="form-control" placeholder="Apellidos" aria-describedby="sizing-addon1" required>
+              </div>
+              <div class="input-group input-group-lg">
+                <span class="input-group-addon" id="sizing-addon1"><i class="glyphicon glyphicon-lock"></i></span>
+                <input type="text"  [(ngModel)]="userInfo.celular" name="celular" class="form-control" placeholder="Celular" aria-describedby="sizing-addon1" required>
+              </div>
+            <div class="input-group input-group-lg">
+             <span class="input-group-addon" id="sizing-addon1"><i class="glyphicon glyphicon-envelope"></i></span>
+             <input type="email" class="form-control" [(ngModel)]="userInfo.email" name="email" placeholder="Correo" aria-describedby="sizing-addon1" required>
+           </div>
+           <br>
+           <div class="input-group input-group-lg">
+             <span class="input-group-addon" id="sizing-addon1"><i class="glyphicon glyphicon-lock"></i></span>
+             <input type="password"  [(ngModel)]="userInfo.password" name="password" class="form-control" placeholder="******" aria-describedby="sizing-addon1" required>
+           </div>
+           
+           <br>
+           <button class="btn btn-lg btn-dark btn-block btn-signin" (click)="registrarCliente()" id="IngresoLog" type="submit">Registrarme</button>
+        </form>
+
+
+        <form action="" method="post" *ngIf="!registroCliente">
+            <h4 *ngIf="!registroCliente">Registro Proveedor</h4>
+
+            <div class="input-group input-group-lg">
+                <span class="input-group-addon" id="sizing-addon1"><i class="glyphicon glyphicon-lock"></i></span>
+                <input type="text"  [(ngModel)]="userInfo.nombre" name="nombre" class="form-control" placeholder="Nombre Empresa" aria-describedby="sizing-addon1" required>
+              </div>
+              <div class="input-group input-group-lg">
+                <span class="input-group-addon" id="sizing-addon1"><i class="glyphicon glyphicon-lock"></i></span>
+                <input type="text"  [(ngModel)]="userInfo.apellido" name="apellido" class="form-control" placeholder="Direccion Fisica" aria-describedby="sizing-addon1" required>
+              </div>
+              <div class="input-group input-group-lg">
+                <span class="input-group-addon" id="sizing-addon1"><i class="glyphicon glyphicon-lock"></i></span>
+                <input type="text"  [(ngModel)]="userInfo.celular" name="celular" class="form-control" placeholder="Telefono" aria-describedby="sizing-addon1" required>
+              </div>
+            <div class="input-group input-group-lg">
+             <span class="input-group-addon" id="sizing-addon1"><i class="glyphicon glyphicon-envelope"></i></span>
+             <input type="email" class="form-control" [(ngModel)]="userInfo.email" name="email" placeholder="Correo" aria-describedby="sizing-addon1" required>
+           </div>
+           <br>
+           <div class="input-group input-group-lg">
+             <span class="input-group-addon" id="sizing-addon1"><i class="glyphicon glyphicon-lock"></i></span>
+             <input type="password"  [(ngModel)]="userInfo.password" name="password" class="form-control" placeholder="******" aria-describedby="sizing-addon1" required>
+           </div>
+           
+           <br>
+           <button class="btn btn-lg btn-dark btn-block btn-signin" (click)="registrarProveedor()" id="IngresoLog" type="submit">Registro Proveedor</button>
+        </form>
+    </div>	
+    </div>
+    <div class="row m-10">
+
+    </div>
+    <br> <br> <br> <br>
