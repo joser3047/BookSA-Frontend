@@ -14,7 +14,7 @@ export class ProductService {
   constructor(private http: HttpClient,private usuarioService:UsuarioService) {
   }
 
-  getAllProducts(limitOfResults=10): Observable<serverResponse> {
+  getAllProducts(limitOfResults=100): Observable<serverResponse> {
     return this.http.get<serverResponse>(this.url + 'products', {
       params: {
         limit: limitOfResults.toString()
