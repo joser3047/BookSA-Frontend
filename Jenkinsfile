@@ -14,7 +14,7 @@ pipeline {
 			}
 			stage('pruebas'){
 				steps {
-					bat "cd C:\\Users\\Administrator\\BookSA-Frontend && ng test"
+					bat "cd C:\\Users\\Administrator\\BookSA-Frontend && npm test"
 				}
 			}
 			stage('construir proyecto'){
