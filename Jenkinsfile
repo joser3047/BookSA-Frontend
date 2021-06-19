@@ -2,9 +2,19 @@ pipeline {
 	agent { label 'master' }
 	
 		stages {
-            stage('bajar'){
+            		stage('bajar repositorio'){
 				steps {
-					bat "cd C:\\Users\\Administrator\\BookSA-Frontend && git pull && npm install && npm run-script build"
+					bat "cd C:\\Users\\Administrator\\BookSA-Frontend && git pull"
+				}
+			}
+			stage('instalar dependencias'){
+				steps {
+					bat "cd C:\\Users\\Administrator\\BookSA-Frontend && npm install"
+				}
+			}
+			stage('construir proyecto'){
+				steps {
+					bat "cd C:\\Users\\Administrator\\BookSA-Frontend && npm run-script build"
 				}
 			}
 		}
