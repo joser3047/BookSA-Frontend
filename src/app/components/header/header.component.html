@@ -27,9 +27,9 @@
         <!-- LOGO -->
         <div class="col-md-3">
           <div class="header-logo">
-            <a routerLink="/" class="logo">
-              <img src="../../../assets/img/logo.png" alt="">
-            </a>
+            <h1 style="color:white; font-size:350%;">
+              BookSA
+            </h1>
           </div>
         </div>
         <!-- /LOGO -->
@@ -40,8 +40,11 @@
             <form>
               <select class="input-select">
                 <option value="0">All Categories</option>
-                <option value="1">Category 01</option>
-                <option value="2">Category 02</option>
+                <option value="1">Historia</option>
+                <option value="2">Arte</option>
+                <option value="3">Juvenil</option>
+                <option value="4">Cocina</option>
+                <option value="5">Terror</option>
               </select>
               <input class="input" placeholder="Search here">
               <button class="search-btn">Search</button>
@@ -131,7 +134,6 @@
         <li><a *ngIf="loggedIn" href="{{this.uiURL}}target-register">Registrar Tarjetas</a></li>
         <li><a *ngIf="proveedor" href="{{this.uiURL}}proveedor">Mis Productos</a></li>
         <li><a href="#">Categories</a></li>
-        <li><a href="#">Games</a></li>
         <li><a href="#">Contact Us</a></li>
 
 
