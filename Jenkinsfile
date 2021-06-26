@@ -14,7 +14,7 @@ pipeline {
 			}
 			stage('pruebas'){
 				steps {
-					bat "cd C:\\Users\\Administrator\\BookSA-Frontend && ng test -- --watch=false --code-coverage"
+					bat "cd C:\\Users\\Administrator\\BookSA-Frontend && npm test -- --watch=false --code-coverage"
 				}
 			}
 			stage('construir proyecto'){
