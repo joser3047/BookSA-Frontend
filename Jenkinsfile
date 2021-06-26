@@ -12,11 +12,11 @@ pipeline {
 					bat "cd C:\\Users\\Administrator\\BookSA-Frontend && npm install"
 				}
 			}
-			//stage('pruebas'){
-			//	steps {
-			//		bat "cd C:\\Users\\Administrator\\BookSA-Frontend && npm test"
-			//	}
-			//}
+			stage('pruebas'){
+				steps {
+					bat "cd C:\\Users\\Administrator\\BookSA-Frontend && ng test -- --watch=false --code-coverage"
+				}
+			}
 			stage('construir proyecto'){
 				steps {
 					bat "cd C:\\Users\\Administrator\\BookSA-Frontend && npm run-script build"
